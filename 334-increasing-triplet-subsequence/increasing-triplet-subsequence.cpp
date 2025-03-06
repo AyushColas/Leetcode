@@ -10,7 +10,6 @@ public:
             else if(num<= second) second = num;
             else return true;
         }
-
         return false;
     }
 };
