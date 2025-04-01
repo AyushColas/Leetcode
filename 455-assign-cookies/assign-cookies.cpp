@@ -14,8 +14,6 @@ public:
             }
             else j++;
         }
-
         return i;
-   
     }
 };
