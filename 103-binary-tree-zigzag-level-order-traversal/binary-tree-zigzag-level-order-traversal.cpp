@@ -29,12 +29,13 @@ public:
                 TreeNode* node = q.front();
                 q.pop();
 
-                int index = leftToRight ? i : (levelSize - 1 - i);
-                elements[index] = node->val;
+                elements[i] = node->val;
 
                 if(node->left) q.push(node->left);
                 if(node->right) q.push(node->right);
             }
+
+            if(!leftToRight) reverse(elements.begin(),elements.end());
 
             result.push_back(elements);
             leftToRight = !leftToRight;
