@@ -1,10 +1,11 @@
 class Solution {
 public:
     int maxSubArray(std::vector<int>& nums) {
-        int maxSum = nums[0], currentSum = 0;
-        for (int num : nums) {
-            currentSum = std::max(num, currentSum + num);
-            maxSum = std::max(maxSum, currentSum);
+        int maxSum = nums[0], currSum = 0;
+
+        for(int num: nums){
+            currSum= max(num, currSum+num);
+            maxSum = max(maxSum, currSum);
         }
         return maxSum;
     }
